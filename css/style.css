@@ -1,88 +1,135 @@
-html,body {
-  font-family: 'Rambla', sans-serif; 
-  overflow:hidden;
-  width:100%;
-  height:100%;
-  position:absolute;
-  /*background: linear-gradient(25deg,#16054A,#C8A6B4); */
-  background: linear-gradient(25deg,#005b96,#aeeafc);
-  text-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+@import url('https://rsms.me/inter/inter-ui.css');
+
+
+* {
+    font-family: 'Inter UI', sans-serif;
+    color: white;
+
 }
-.container  {
-  width:100%;
-  height:100%;
-  position:absolute;
+
+body, .home {
+	overflow-x: hidden;
+	margin: 0%;
+	background-color: black;
 }
-#blurCanvasTop{
-  left:0%;
-  top:0%;
-  position:absolute;
+
+.home {
+	height: 100vh;
 }
-#blurCanvasBottom{
-  left:50%;
-  top:0;
-  position:absolute;
+
+h1, h2 {
+	color: white;
+	word-wrap: break-word;
+
 }
-.content {
-  left:15%;
-  top:20%;
-  width:70%;
-  position:relative;
+
+.far:hover, .fab:hover{
+	animation: move 4s linear infinite;
+	background-image: linear-gradient(to right, #77f, #33d0ff, #25ffbb, #33d0ff, #77f);
+	background-size: 200% auto; 
+	letter-spacing: 1px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
-h1.title {
-  color:white;
-  font-size: 5vw;
-  display:inline;
-  font-weight:500;
-  font-family: 'Rambla', sans-serif; 
+
+
+.will-main {
+	font-weight: normal;
+	font-size: 18vh;
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%); 
+
+	animation: move 4s linear infinite;
+	background-image: linear-gradient(to right, #77f, #33d0ff, #25ffbb, #33d0ff, #77f);
+	background-size: 200% auto;
+	letter-spacing: 1px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
-p.desc{
-  position:relative;
-  width:100%;
-  font-size:3vw;
-  color:rgba(255,255,255,1);
-  font-weight: 200;
-  margin-bottom:40px;
+
+.will-about {
+	font-weight: normal;
+	font-size: 8vh;
+	top: 30%;
+	text-align: center;
+	position: relative;
 }
-.contacts {
-  position:absolute;
-  right:0%;
-  bottom:0;
-  margin-bottom:1vw;
-  margin-right:1vw;
+@keyframes move { to { background-position: 200% center; } }
+
+
+.contact-info {
+	font-weight: normal;
+	font-size: 3vh;
+	top: 30%;
+	text-align: center;
+	position: relative;
 }
-.contact li {
-  list-style-type:none;
-  float:left;
-  color: rgba(255,255,255,0.8);
-  font-weight:100;
-  font-size:2vw;
+ 
+
 }
-.contact li a {
-  text-decoration:none;
-  color: rgba(255,255,255,0.8);
+
+#bottom-line {
+	letter-spacing: -15px;
+	top: 60%;
+	margin: auto;
+	left: 0%;
+
 }
-.contact li a:hover{
-  color:rgba(255,255,255,1);
+
+h2 {
+	text-align: center;
+	position: relative;
+	top: 40%;
+	font-size: 4vh;
 }
-.contact li~li {
-  margin-left:1vw; 
+
+@media only screen and (max-width: 480px) {
+  .will-main {
+    font-size: 11vh; 
+    top: 35%;
+    }
+
+   .will-about {
+    font-size: 5.2vh;
+    top: 25%; 
+    word-wrap: break-word;
+   } 
+
+   .contact-info {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	}
+
 }
-.blur {
-  width:100%;
-  height:100%;
-  position:absolute;
-  overflow:hidden;
+
+
+@media all and (min-width:768px) and (max-width: 1024px) {
+  .will-main {
+    font-size: 11vh; 
+    top: 35%;
+    }
+
+   .will-about {
+    font-size: 4.7vh;
+    top: 28%; 
+    word-wrap: break-word;
+   } 
+
+   .contact-info {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	}
 }
-.blurTop{
-  left:40%;
-  top:-110%;
-  transform:rotate(20deg);
-  transform-origin: 0 100%;
-}
-.blurBottom{
-  left:-60%;
-  top:100%;
-  transform:rotate(20deg);
-  transform-origin: 100% 0%;
-}
+
+
+
+
+
+
+
+
