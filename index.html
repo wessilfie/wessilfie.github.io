@@ -24,6 +24,8 @@
 	<meta property="og:image:height" content="1024">
 
 	<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+	<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -31,19 +33,57 @@
 </head>
 
 <body>
-	<div class="home">
-			<h1 class="will-main"> Will Essilfie </h1>
-			<h3 class="will-about"> Columbia '18 | Data @ Facebook </h3>
-			<div class="contact-info">
-				<a id="button1" href="mailto:will.essilfie@gmail.com"><i class="far fa-envelope fa-3x button" id="soc-but"></i></a>
-				<a href="https://www.linkedin.com/in/wessilfie/"><i class="fab fa-linkedin fa-3x button"></i></a>
-				<a href="https://www.facebook.com/wkessilfie"><i class="fab fa-facebook-square fa-3x button"></i></a>
-				<a href="https://twitter.com/WillEssilfie"><i class="fab fa-twitter-square fa-3x button"></i></a>
-				<a href="https://github.com/wessilfie"><i class="fab fa-github-square fa-3x button"></i></a>
-			</div>
-
+	<div id="center-text">
+		<a class="will-name" href="#"> Will Essilfie </a> 
 	</div>
-	
+	<!-- Home splash (full screen) -->
+	<div class="home-img">
+	  <div class="browser">
+	  <div class="chrome">
+	  </div> 
+	  <h1 class="animated bounce">Hello!</h1>
+	  <h3><span id="typed"></span> </h3>
+	  <p>About me:</p>
+	  <ul>
+	  	<li>I graduated from Columbia University with a degree in Computer Science 🦁</li>
+	  	<li>I'm a Data Scientist at Facebook </li>
+	  	<li>📍San Francisco Bay Area</li>
+	  	<li>Bucket list vacation spot: Antarctica  </li>
+	  </ul>
+
+	  <p> Let's connect:</p>
+	  <ul>
+	  	<li><a href="https://www.facebook.com/wkessilfie">Facebook</a></li>
+	  	<li><a href="https://www.instagram.com/wessilfie">Instagram</a></li>
+	  	<li><a href="https://www.linkedin.com/in/wessilfie/">LinkedIn</a></li>
+	  	<li><a href="https://github.com/wessilfie">GitHub</a></li>
+	  	<li><a href="https://twitter.com/WillEssilfie">Twitter</a></li>
+	  	<li><a href="mailto:will.essilfie@gmail.com">Email</a></li>
+	  </ul>
+	  </div>
+	</div>  
+
+	    <div id="typed-strings" style="display: none;">
+	    <p> Welcome to my website! </p>
+	    <p> Here's some fun facts about me </p>
+        <p>Crisp Apple Hint Water fan.</p>
+        <p>On an Original Broadway Cast Recording</p>
+        <p>Proud Ghanaian</p>
+        <p>Favorite fruit: mangos</p>
+        </div>
+	<!-- Typed.js animation-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.7/typed.min.js'></script>
+    <script>
+        var typed = new Typed('#typed', {
+          stringsElement: '#typed-strings',
+          startDelay: 3,
+          backSpeed: 3,
+          typeSpeed: 50,
+          loop: true,
+        });
+          
+    </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
