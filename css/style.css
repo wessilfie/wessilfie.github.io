@@ -30,23 +30,13 @@ h1, h2 {
 
 }
 
-/* .far:hover, .fab:hover{
-	animation: move 4s linear infinite;
-	background-image: linear-gradient(to right, #77f, #33d0ff, #25ffbb, #33d0ff, #77f);
-	background-size: 200% auto; 
-	letter-spacing: 1px;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-} */
-
 #center-text {
   height: 90px;
   line-height: 90px;
   text-align: center;
-  left: -1;
+  padding-top: 10px;
 }
 .will-name {
-	padding-top: 45px !important;
 	font-weight: normal;
 	font-size: 10vh !important;
 	color: white;
@@ -58,6 +48,13 @@ h1, h2 {
 	letter-spacing: 1px;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+#hangout-image {
+  width:80%;
+  height:40%;
+  display:block;
+  margin:auto;
 }
 
 .will-about {
@@ -77,8 +74,6 @@ h1, h2 {
 	margin-left: 40px;
 	color: black !important;
 	padding: 20px;
-	/*text-align: center; */
-	/* position: relative; */
 }
 
 #contact-button {
@@ -138,9 +133,13 @@ h2 {
 
 
 @media all and (min-width:768px) and (max-width: 1024px) {
+  #center-text {
+    padding-top: 30px;
+  }
+
   .will-name {
     font-size: 8vh !important; 
-    top: 35%;
+    top: 45%;
     padding-bottom: 10px;
     }
 
@@ -162,7 +161,6 @@ h2 {
 /* Start of Browser window CSS - https://codepen.io/candroo/pen/ozBEWY */
 div.browser {
    background-color: white;
-  /*background: #fff url(http://www.s4c.cymru/temp/unsplash-kitsune-4.jpg) no-repeat;  */
   background-size: cover;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -253,6 +251,15 @@ div.browser h3 {
   padding-top: 20px;
   margin-top: -20px;
   margin-bottom: 20px;
+}
+
+div.browser h4 {
+  font-size: 20px;
+  line-height: 1em;
+  /* max-width: 16em; */
+  margin: 0;
+  padding: 0 40px;
+  padding-top: 5px;
 }
 
 div.browser p {
