@@ -1,6 +1,6 @@
 # Will Essilfie's Website
-This is my current personal website used on my Columbia [account](http://www.columbia.edu/~wke2102/) and on Github [pages](http://www.wessilfie.github.io).
+This is my current personal website live at [essilfie.com](https://www.essilfie.com/).
 
-## Making files public
-Use the following line to make all files in the folder public `chmod -R 755 ~/public_html`
+## Credits
+Site design and setup inspired by [Dan Schlosser](https://github.com/schlosser/schlosser.io) & [Jeff Hilnbrand](https://github.com/jhil/jhilco-2018)'s Minimill/website templates. 
 
