@@ -1,0 +1,91 @@
+#post-box {
+    padding-left: 32px;
+    font-size: 24px;
+    width: 96%;
+}
+
+h1#post-title  {
+    font-size: 56px;
+}
+
+#post-image {
+    max-width: 40%;
+    margin: 8px;
+    display: block;
+}
+
+.button {
+    background-color: #FF6900;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+
+/* Mobile phone sizes */
+@media screen and (max-width: 480px) 
+  and (orientation: portrait) { 
+
+      h1#post-title  {
+        font-size: 24px;
+    }
+
+    #post-image {
+        max-width: 88%;
+        margin: 8px;
+        display: block;
+    }
+
+    #post-box {
+        padding-left: 32px;
+        font-size: 16px;
+        width: 96%;
+    }
+
+
+}
+
+/* Tablet sizes */
+@media screen 
+and (min-device-width: 760px) 
+and (max-width: 768px) 
+  and (orientation: portrait) { 
+   
+
+
+}
+
+@media screen and (max-height: 480px) 
+  and (orientation: landscape)  { 
+
+    #post-image {
+        max-width: 56%;
+        margin: 8px;
+        display: block;
+    }
+  } 
+
+  @media (prefers-color-scheme: dark) {
+    h1#post-title {
+        color: white;
+    }
+    a {
+      color: white;
+      text-decoration-color: #FF6900;
+    }
+
+  }
+
+  @media (prefers-color-scheme: light) {
+    a {
+      color: black;
+      text-decoration-color: #FF6900;
+    }
+
+  }
