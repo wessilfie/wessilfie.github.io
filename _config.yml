@@ -19,7 +19,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title/
-
+  work:
+    output: true
+    permalink: /:collection/:title/
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/

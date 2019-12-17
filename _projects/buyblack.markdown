@@ -2,7 +2,7 @@
 layout: post
 title:  "Buy Black SF"
 date:   2019-12-04 20:37:30 -0800
-categories: jekyll update
+categories: apps restaurants 
 external_link: https://buyblack.glideapp.io/
 image_slug: /img/buyblack/alex.jpg
 ---
