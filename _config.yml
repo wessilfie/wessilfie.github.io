@@ -5,8 +5,8 @@ title: Will Essilfie
 email: will@essilfie.com
 description: >- # this means to ignore newlines until "baseurl:"
   Product Manager at RangeMe. Previously a Data Scientist, Editor in Chief, and student at Columbia.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" 
+url: "https://www.essilfie.com/" 
 twitter_username: WillEssilfie
 github_username:  wessilfie
 via_info: via San Francisco
