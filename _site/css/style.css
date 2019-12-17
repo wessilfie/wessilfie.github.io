@@ -386,8 +386,6 @@ div#header-and-platform1 {
       transform: translateY(-40%);
   }
 
-/* */
-
 .breadcrumb-padding {
     padding-left: 8px;
 }
@@ -475,6 +473,15 @@ h1#name-header, h2#name-header{
   .breadcrumb-padding {
     padding-left: 32px;
 }
+
+#footer {
+    bottom: auto;
+}
+#footer-links a {
+    font-size: 24px;
+}
+
+
 
 
 }
