@@ -6,7 +6,7 @@ email: will@essilfie.com
 description: >- # this means to ignore newlines until "baseurl:"
   Product Manager at RangeMe. Previously a Data Scientist, Editor in Chief, and student at Columbia.
 baseurl: "" 
-url: "https://www.essilfie.com/" 
+url: "https://www.essilfie.com" 
 twitter_username: WillEssilfie
 github_username:  wessilfie
 via_info: via San Francisco
