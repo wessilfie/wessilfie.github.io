@@ -24,8 +24,12 @@
     width: 80%;
 }
 
+h2#project-header {
+    font-size: 40px !important;
+}
 h2#project-header, ul#breakdown-list {
     margin: 16px;
+    font-size: 32px;
 }
 
 ul li#list-bullet {
@@ -41,7 +45,7 @@ ul li#list-bullet {
     } */
 
       #project-header {
-          font-size:36px !important;
+          font-size:32px !important;
     
     }
     #list-bullet {

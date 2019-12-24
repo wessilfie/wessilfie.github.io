@@ -10,6 +10,7 @@ url: "https://www.essilfie.com"
 twitter_username: "WillEssilfie"
 github_username:  "wessilfie"
 via_info: "via San Francisco"
+future: false
 
 # Build settings
 plugins:
@@ -22,6 +23,9 @@ collections:
   work:
     output: true
     permalink: /:collection/:title/
+  posts:
+    output: true 
+    permalink: /:collection/:title
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/

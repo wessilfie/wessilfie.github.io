@@ -78,11 +78,17 @@ h1 {
     color: black;
     font-size: 32px;
     font-weight: 400;
+    padding-right: 8px;
 }
 
 .footer-text:hover {
     text-decoration: underline !important;
     text-decoration-color: #FF6900 !important;
+}
+
+#transit-arrow {
+    font-size: 32px;
+    display: inline;
 }
 
 #footer #time {
@@ -209,8 +215,6 @@ div#header-and-platform1 {
 }
 
 #contact-text {
-    /*text-align: right;
-    float: right; */
     padding-bottom: 48px;
 }
 
@@ -530,8 +534,6 @@ div#platform-container {
     padding-right: 32px;
     font-size: 24px !important;
 }
-
-
 
 }
 
