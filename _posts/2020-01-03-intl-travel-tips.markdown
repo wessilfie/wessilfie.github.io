@@ -1,7 +1,7 @@
 ---
 layout: blog
 title:  "8 steps to take before your next international trip"
-date:   2019-01-03 09:45:00 -0800
+date:   2020-01-03 09:45:00 -0800
 categories: travel airports tips 
 external_link: https://medium.com/@will.essilfie/how-to-write-a-good-cold-email-482e9e12a142
 image_slug: /img/blog/email.jpg
