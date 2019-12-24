@@ -150,7 +150,7 @@ and (max-width: 768px)
   } 
 
   @media (prefers-color-scheme: dark) {
-    h1#post-title {
+    h1#post-title, h1.blog-title {
         color: white;
     }
     a {
