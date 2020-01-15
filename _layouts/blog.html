@@ -15,7 +15,7 @@
   <h3 class="published-date">Published on {{ page.date | date: "%-B %d, %Y"}} </h3>
 </div>
 
-<img class="blog-banner-image" src={{site.url}}{{page.image_slug}} alt="drawing"/> 
+<img class="blog-banner-image" src={{site.url}}{{page.image_slug}} alt="post image"/> 
 <div class="blog-box">
   {{content}}
   {% if page.external_link contains "medium.com" %}
