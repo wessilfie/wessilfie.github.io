@@ -62,10 +62,10 @@
    <div id="intro-section"> 
       <div class="navbar-container">
         <div class="breadcrumb-padding" id="site-breadcrumbs">
-            <a href="/"> <i class="fas fa-arrow-alt-circle-right"></i> / </a>
-            <a href="http://localhost:4000/">  </a>
+            <a href="/" class="noselect"> <i class="fas fa-arrow-alt-circle-right"></i> / </a>
+            <a href="http://localhost:4000/" class="noselect">  </a>
         </div>
-        <div><a href="#" class="header-text" id="time">WE</a></div>
+        <div><a href="#" class="header-text noselect" id="time">WE</a></div>
     </div> 
   </div> 
 
@@ -73,12 +73,12 @@
 </div> 
 
 <div id="intro-section"> 
-    <div id="img-box"><img src="http://localhost:4000/img/transitlogos/we.svg"></div>
+    <div id="img-box"><img class="noselect" src="http://localhost:4000/img/transitlogos/we.svg" alt="essilfie.com logo"></div>
     <div class="flex-container">
-      <div id="name-container"><h1 id="name-header">Will Essilfie</h1></div>
-      <div id="platform-container"><h2 id="platform-name">Platform</h2></div>  
-      <div><h2 id="via-city">via San Francisco</h2></div>
-      <div id="number-container"><h2 id="platform-number">1</h2></div> 
+      <div id="name-container"><h1 class="noselect" id="name-header">Will Essilfie</h1></div>
+      <div id="platform-container"><h2 class="noselect" id="platform-name">Platform</h2></div>  
+      <div><h2 class="noselect" id="via-city">via San Francisco</h2></div>
+      <div id="number-container"><h2 class="noselect" id="platform-number">1</h2></div> 
   </div> 
 </div>
 
@@ -92,6 +92,10 @@
   <h2 id="project-header"> Posts </h2>
 
 <ul id="breakdown-list">
+  
+  <li id="list-bullet"> <a href="/posts/building-with-glide">How I built a mobile web app with 0 lines of code in under an hour </a> </li>
+  
+  <li id="list-bullet"> <a href="/posts/intro-to-award-points">How I booked a $12,000 flight for $100 </a> </li>
   
   <li id="list-bullet"> <a href="/posts/intl-travel-tips">8 steps to take before your next international trip </a> </li>
   
@@ -110,6 +114,26 @@
 <!-- not in use -->
 
 <!-- <ul id="blog-list-bullet">
+  
+    <li id="blog-bullet">
+      <div id="blog-post"> 
+        <div id="blog-img-box"><img id="blog-article-image" src="http://localhost:4000/img/blog/computer-typing.jpg"></img></div>
+        <div class="blog-flex-container">
+          <div><h1 id="blog-post-title">How I built a mobile web app with 0 lines of code in under an hour</h1></div>
+          <div><h2 id="blog-post-excerpt">Published on January 21, 2020</h2></div>
+        </div> 
+      </div>
+    </li>
+  
+    <li id="blog-bullet">
+      <div id="blog-post"> 
+        <div id="blog-img-box"><img id="blog-article-image" src="http://localhost:4000/img/blog/cathay.jpg"></img></div>
+        <div class="blog-flex-container">
+          <div><h1 id="blog-post-title">How I booked a $12,000 flight for $100</h1></div>
+          <div><h2 id="blog-post-excerpt">Published on January 18, 2020</h2></div>
+        </div> 
+      </div>
+    </li>
   
     <li id="blog-bullet">
       <div id="blog-post"> 
@@ -169,7 +193,7 @@
 
 
 <div id="contact-box">
-  <h1 id="contact-text"> Contact me <br> 
+  <h1 class="noselect" id="contact-text"> Contact me <br> 
 
   <ul class="nav-social">
 
