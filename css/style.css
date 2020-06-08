@@ -402,7 +402,7 @@ div#header-and-platform1 {
   }
 
 .breadcrumb-padding {
-    padding-left: 8px;
+    padding-left: 0px;
 }
 
 @media screen and (max-height: 480px) 
