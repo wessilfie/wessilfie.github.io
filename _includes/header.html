@@ -1,28 +1,32 @@
 <head>
-
-  <meta charset="utf-8" />
-  <title>{{site.title}}</title>
- 
   <meta charset="UTF-8">
-  <meta itemprop="name" content="{{site.title}}">
-  <meta name="description" content="{{site.description}}">
+  <title>{{ site.title }}</title>
+  <meta itemprop="name" content="{{ site.title }}">
+  <meta name="description" content="{{ site.description }}">
   <meta name="keywords" content="Will Essilfie, essilfie , essilfie.com">
-  <meta name="author" content="{{site.title}}">
+  <meta name="author" content="{{ site.author }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Open Graph data  -->
-  <meta property="og:url" content="{{site.url}}">
+  <meta property="og:url" content="{{ site.url }}">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{site.title}}">
-  <meta property="og:description" content="{{site.description}}">
-  <meta property="og:image" content="{{site.url}}/img/general/header.png">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="{{ site.url }}/img/general/header.png">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="1024">
+  
+  <!-- Twitter data-->
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/img/general/header.png">
+  <meta name="twitter:card" content="summary_large_image">
+
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" href="{{site.url}}/img/favicon/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{site.url}}/img/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon/favicon-16x16.png" sizes="16x16" />
   
   <meta name="application-name" content="&nbsp;"/>
 
