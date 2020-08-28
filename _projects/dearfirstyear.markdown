@@ -3,7 +3,7 @@ layout: post
 title:  "Dear First Year"
 date:   2020-08-27 22:00:00 -0800
 categories: community writing submissions firstyears college
-external_link: https://dearfirstyear.com/
+external_link: https://www.dearfirstyear.com/
 image_slug: /img/dfy/dfy.png
 ---
 
