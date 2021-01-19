@@ -12,6 +12,9 @@ github_username:  "wessilfie"
 via_info: "via San Francisco"
 future: false
 
+sass:
+    style: compressed
+    
 # Build settings
 plugins:
   - jekyll-feed
@@ -26,14 +29,20 @@ collections:
   posts:
     output: true 
     permalink: /:collection/:title
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - gulpfile.js
+  - node_modules
+  - package.json
+  - package-lock.json
+

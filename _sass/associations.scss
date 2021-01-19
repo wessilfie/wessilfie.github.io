@@ -1,0 +1,33 @@
+//companies and org colors
+$rangeme-blue: #006fcf;
+
+
+#rangeme {
+    color: $rangeme-blue;
+    text-decoration: none;
+}
+
+#rangeme:hover {
+    text-decoration: underline;
+    text-decoration-color: $rangeme-blue;
+}
+
+#interact {
+    color: #3a3836;
+    text-decoration: none;
+}
+
+#interact:hover {
+    text-decoration: underline;
+    text-decoration-color: #3a3836;
+}
+
+.association-columbia {
+    color: #9bdfff !important;
+    text-decoration: none;
+}
+
+.association-columbia:hover {
+        text-decoration: underline;
+        text-decoration-color: #9bdfff;
+    }

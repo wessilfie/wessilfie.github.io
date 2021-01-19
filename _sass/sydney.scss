@@ -1,0 +1,95 @@
+$sydney-transit-orange: #ff6900;
+
+#name-header {
+    text-align: left;
+}
+
+#platform-name {
+    text-align: right;
+}
+
+#via-city {
+    text-align: left;
+}
+
+#platform-number {
+    text-align: right;
+    padding-right: 0 !important;
+}
+
+#via-text h1 {
+    text-align: left;
+    float: left;
+}
+
+#header-and-platform1 {
+    h1 {
+        text-align: left !important;
+        float: left !important;
+    }
+
+    h2 {
+        text-align: right;
+        float: right;
+    }
+}
+
+#platform-text {
+    font-size: 32px;
+    padding-right: 32px !important;
+    font-size: 48px;
+    font-weight: 500 !important;
+}
+
+#platform-number {
+    font-size: 56px;
+    padding-right: 32px !important;
+    color: $sydney-transit-orange !important;
+    font-weight: 500 !important;
+}
+
+#via-text {
+    font-size: 32px;
+    font-weight: 400;
+    padding-left: 0px !important;
+}
+
+/* preventing highlighting on certain sections of site */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}
+
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    #platform-name,
+    #platform-number {
+        display: none !important;
+    }
+    div#platform-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    #platform-name,
+    #platform-number {
+        display: none;
+    }
+
+    div {
+        #platform-container {
+            display: none;
+        }
+    }
+
+    h1#name-header,
+    h2#name-header {
+        font-size: 24px;
+    }
+}
+
