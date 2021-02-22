@@ -9,6 +9,6 @@ image_slug: /img/interact/interact.png
 
 ![image]({{site.url}}/img/interact/interact.png){: #post-image}
 
-Operations Lead, 2019 - Present
+Operations Lead, December 2019 - December 2020
 
 I'm Operations Lead for Interact, a global community of technologists as well as a 2019 Fellow. 
