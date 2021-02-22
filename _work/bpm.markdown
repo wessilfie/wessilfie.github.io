@@ -10,6 +10,7 @@ image_slug: /img/interact/interact.png
 ![image]({{site.url}}/img/bpm/bpm.png){: #post-image}
 
 Events Chair, 2021 - Present
-Events Committee Memmber, September 2020 - January 2021
+
+Events Committee Member, September 2020 - January 2021
 
 I'm the Events Chair for Black Product Managers, a global community of Black PMs whose mission is "to create the most authentic, recognizable and impactful way for Black PMs to advance their careers." As Events Chair, I develop program that challenges, informs, and engages our 600+ member community. 
