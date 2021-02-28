@@ -1,28 +1,30 @@
 <head>
   <meta charset="UTF-8">
-  <title>{{ site.title }}</title>
-  <meta itemprop="name" content="{{ site.title }}">
-  <meta name="description" content="{{ site.description }}">
-  <meta name="keywords" content="Will Essilfie, essilfie , essilfie.com">
-  <meta name="author" content="{{ site.author }}">
+  <title> {% if page.title %}{{ page.title }} {% else %} {{ site.title }} {% endif %}</title>
+  <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="description" content="{% if page.layout == 'blog' %}{{ page.content | strip_html | truncatewords: 50 }}{% else %}{{site.description}}{% endif %}">
+  <meta name="keywords" content="{% if page.tags %}{{page.tags}}{% else %}Will Essilfie, essilfie , essilfie.com{% endif %}">
+  <meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Open Graph data  -->
-  <meta property="og:url" content="{{ site.url }}">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ site.title }}">
-  <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:image" content="{{ site.url }}/img/general/header.png">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1024">
-  <meta property="og:image:height" content="1024">
-  
-  <!-- Twitter data-->
-  <meta name="twitter:title" content="{{ site.title }}">
-  <meta name="twitter:description" content="{{ site.description }}">
-  <meta name="twitter:image" content="{{ site.url }}/img/general/header.png">
-  <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Open Graph data  -->
+    <meta property="og:url" content="{{ site.url }}{{page.url}}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description" content="{% if page.layout == 'blog'%}{{ page.content | strip_html | truncatewords: 50 }}{% else %}{{site.description}}{% endif %}">
+    <meta property="og:image" content="{% if page.image_slug %}{{site.url}}{{page.image_slug}}{% elsif page.image_url %}{{page.image_url}}{% else %}{{ site.url }}/img/general/header.png {% endif %}">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    
+    <!-- Twitter data-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dearfirstyear">
+    <meta name="twitter:creator" content="@dearfirstyear">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.layout == 'blog'%}{{ page.content | strip_html | truncatewords: 50 }}{% else %}{{site.description}}{% endif %}">
+    <meta name="twitter:image" content="{% if page.image_slug %}{{site.url}}{{page.image_slug}} {% elsif page.image_url %}{{page.image_url}}{% else %}{{ site.url }}/img/general/header.png {% endif %}">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon/favicon-32x32.png" sizes="32x32" />
