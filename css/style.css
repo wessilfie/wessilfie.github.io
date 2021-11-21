@@ -161,12 +161,12 @@ h1 {
     width: 64%;
 }
 
-#tpt {
+a#tpt {
     color: #0aa96c !important;
     text-decoration: none;
 }
 
-#tpt:hover {
+a#tpt:hover {
     text-decoration: underline;
     text-decoration-color: #0aa96c !important;
 }
