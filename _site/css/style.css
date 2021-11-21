@@ -161,6 +161,16 @@ h1 {
     width: 64%;
 }
 
+#tpt {
+    color: #0aa96c !important;
+    text-decoration: none;
+}
+
+#tpt:hover {
+    text-decoration: underline;
+    text-decoration-color: #0aa96c !important;
+}
+
 #rangeme {
     color: #006FCF;
     text-decoration: none;
