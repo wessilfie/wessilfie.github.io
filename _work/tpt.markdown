@@ -9,7 +9,8 @@ image_slug: /img/tpt/tpt.png
 
 ![image]({{site.url}}/img/tpt/tpt.png){: #post-image}
 
-Senior Product Manager, 2021 - Present
+Lead Product Manager, 2022 - Present
+Senior Product Manager, 2021 - 2022
 
-I currently lead the Search & Recommendations team at Teachers Pay Teachers. We work on enabling millions of teachers to find the right content they need for their classrooms.
+I currently lead the Core Experience team on TPT's Marketplace. Previously, I was the PM for our Search & Recommendations team a. We work on enabling millions of teachers to find the right content they need for their classrooms.
 
