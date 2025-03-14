@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Black Product Managers"
-date:   2021-01-20 20:37:30 -0800
+title:  "BPM Product Community"
+date:   2025-03-14 08:53:30 -0800
 categories: community product technologists
 external_link: https://www.blackproductmanagers.com/
-image_slug: /img/interact/interact.png
+image_slug: /img/bpm/bpm.png
 ---
 
 ![image]({{site.url}}/img/bpm/bpm.png){: #post-image}
@@ -13,4 +13,6 @@ Events Chair, 2021 - Present
 
 Events Committee Member, September 2020 - January 2021
 
-I'm the Events Chair for Black Product Managers, a global community of Black PMs whose mission is "to create the most authentic, recognizable and impactful way for Black PMs to advance their careers." As Events Chair, I develop program that challenges, informs, and engages our 600+ member community. 
+Head of Partnerships, January 2021 - Present
+
+I'm the Head of Partnerships for BPM, a global community of Product Management professionals whose mission is to create the most authentic, recognizable and impactful way for PMs to advance their careers. I lead our partnerships with many of the world's leading technology companies. 
