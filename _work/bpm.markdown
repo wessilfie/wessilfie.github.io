@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "BPM Product Community"
-date:   2025-03-14 08:53:30 -0800
+date:   2025-02-10 08:53:30 -0800
 categories: community product technologists
 external_link: https://www.blackproductmanagers.com/
 image_slug: /img/bpm/bpm.png
