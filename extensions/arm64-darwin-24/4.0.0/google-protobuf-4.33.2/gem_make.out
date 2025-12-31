@@ -1,5 +1,0 @@
-current directory: /Users/wessilfie/Documents/GitHub/wessilfie.github.io/gems/google-protobuf-4.33.2/ext/google/protobuf_c
-/opt/homebrew/opt/ruby/bin/ruby -rrubygems /Users/wessilfie/Documents/GitHub/wessilfie.github.io/gems/rake-13.3.1/exe/rake RUBYARCHDIR\=/Users/wessilfie/Documents/GitHub/wessilfie.github.io/extensions/arm64-darwin-24/4.0.0/google-protobuf-4.33.2 RUBYLIBDIR\=/Users/wessilfie/Documents/GitHub/wessilfie.github.io/extensions/arm64-darwin-24/4.0.0/google-protobuf-4.33.2
-Ignoring google-protobuf-4.33.2 because its extensions are not built. Try: gem pristine google-protobuf --version 4.33.2
-Ignoring google-protobuf-4.33.2 because its extensions are not built. Try: gem pristine google-protobuf --version 4.33.2
-Skipping build of FFI; `gem install ffi-compiler` to enable.
