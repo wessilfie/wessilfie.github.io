@@ -1,11 +1,11 @@
 source "https://rubygems.org"
-#gem "jekyll", "~> 4.0.0"
-gem "jekyll", github: "jekyll/jekyll"
-# gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.4.0"
 gem 'rdiscount'
+gem 'logger'  # Required for Ruby 4.0+
+gem 'webrick' # Required for Ruby 3.0+
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed", "~> 0.17"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

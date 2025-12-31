@@ -15,9 +15,9 @@ h1#post-title  {
 }
 
 .button {
-    background-color: #FF6900;
+    background-color: var(--brand-accent-primary);
     border: none;
-    color: white;
+    color: var(--brand-text-inverse);
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -25,8 +25,7 @@ h1#post-title  {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
-
+}
 
 .blog-banner-image {
   width: 100%;
@@ -39,131 +38,124 @@ h1#post-title  {
 
 .blog-info h1, h3 {
   margin:0px;
-
 }
+
 .blog-box {
   padding-left: 128px;
   padding-right: 128px;
   font-size: 24px;
 }
 
-/* #blog-post {
-  display: flex;
-}
+/* Mobile phone sizes (up to 767px) */
+@media screen and (max-width: 767px) {
 
-#blog-img-box {
-  height: 200px;
-  width: 500px;
-  margin: 16px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-}
-
-#blog-post-title {
-  font-size: 32px;
-}
-
-#blog-post-excerpt {
-  font-size: 24px;
-}
-#blog-bullet {
-  -webkit-column-break-inside:avoid;
-  -moz-column-break-inside:avoid;
-       column-break-inside:avoid;
-}
-#blog-list-bullet {
-  list-style-type: none;
-  padding: 0;
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-}
-#blog-article-image {
-  object-fit: scale-down;
-  width: 100%;
-  height: 50%;
-}
-#blog-flex-container {
-  font-size: 16px;
-}
-
-.blog-flex-container {
-  display: block;
-  flex-wrap: wrap;
-  flex-grow: 1;
-}
-
-.blogflex-container > div {
-  width: 50%;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-  height: 32px;
-} */
-
-/* Mobile phone sizes */
-@media screen and (max-width: 480px) 
-  and (orientation: portrait) { 
-
-      h1#post-title, h1.blog-title  {
-        font-size: 32px;
+    h1#post-title, h1.blog-title {
+        font-size: 28px;
     }
 
     h3.published-date {
-      font-size: 16px;;
+        font-size: 14px;
     }
 
     #post-image {
-        max-width: 88%;
-        margin: 8px;
+        max-width: 100%;
+        margin: 8px 0;
         display: block;
     }
 
     #post-box, .blog-box {
-        padding-left: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
         font-size: 16px;
-        width: 96%;
-        padding-right: 32px;
+        width: 100%;
+    }
+
+    .blog-info {
+        margin: 16px;
     }
 
 }
 
-/* Tablet sizes */
-/* @media screen 
-and (min-device-width: 760px) 
-and (max-width: 768px) 
-  and (orientation: portrait) { 
-   
+/* Tablet sizes (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
+    h1#post-title, h1.blog-title {
+        font-size: 40px;
+    }
 
-} */
+    #post-image {
+        max-width: 60%;
+    }
 
-@media screen and (max-height: 480px) 
-  and (orientation: landscape)  { 
+    .blog-box {
+        padding-left: 48px;
+        padding-right: 48px;
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-height: 480px) and (orientation: landscape) {
 
     #post-image {
         max-width: 56%;
         margin: 8px;
         display: block;
     }
-  } 
 
-  @media (prefers-color-scheme: dark) {
+}
+
+@media (prefers-color-scheme: dark) {
     h1#post-title, h1.blog-title {
         color: white;
     }
     a {
-      color: white;
-      text-decoration-color: #FF6900;
+        color: white;
+        text-decoration-color: var(--brand-accent-primary);
     }
+}
 
-  }
-
-  @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
     a {
-      color: black;
-      text-decoration-color: #FF6900;
+        color: black;
+        text-decoration-color: var(--brand-accent-primary);
     }
+}
 
-  }
+/* Sea-Tac theme post styles */
+[data-theme="sea"] h1#post-title,
+[data-theme="sea"] h1.blog-title {
+    color: var(--brand-text);
+}
+
+[data-theme="sea"] a {
+    color: var(--brand-text);
+    text-decoration-color: var(--brand-accent-primary);
+}
+
+[data-theme="sea"] #post-box,
+[data-theme="sea"] .blog-box {
+    color: var(--brand-text);
+}
+
+/* NYC theme post styles */
+[data-theme="nyc"] h1#post-title,
+[data-theme="nyc"] h1.blog-title {
+    color: var(--brand-text);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+[data-theme="nyc"] a {
+    color: var(--brand-accent-primary);
+    text-decoration: none;
+}
+
+[data-theme="nyc"] a:hover {
+    text-decoration: underline;
+}
+
+[data-theme="nyc"] #post-box,
+[data-theme="nyc"] .blog-box {
+    color: var(--brand-text);
+}

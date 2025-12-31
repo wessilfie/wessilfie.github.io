@@ -1,0 +1,2 @@
+--with-cflags=-Wno-error=implicit-int
+-Wno-error=implicit-function-declaration

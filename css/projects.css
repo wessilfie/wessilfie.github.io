@@ -1,5 +1,5 @@
 #list-bullet {
-    text-decoration-color: black;
+    text-decoration-color: var(--brand-text);
 }
 
 #breakdown-list {
@@ -7,15 +7,14 @@
 }
 
 #breakdown-list a {
-    /* text-decoration-color: #FF6900; */
     text-decoration-line: none;
-    color: black;
+    color: var(--brand-text);
 }
 
 #breakdown-list a:hover {
-    text-decoration-color: #FF6900;
+    text-decoration-color: var(--brand-accent-primary);
     text-decoration-line: underline;
-    color: black;
+    color: var(--brand-text);
 }
 
 #project-box {
@@ -36,38 +35,46 @@ ul li#list-bullet {
     list-style-type: disc;
 }
 
-/* Mobile phone sizes */
-@media screen and (max-width: 480px) 
-  and (orientation: portrait) { 
+/* Mobile phone sizes (up to 767px) */
+@media screen and (max-width: 767px) {
 
-    /* ul li#list-bullet {
-        list-style-type: disc !important;
-    } */
-
-      #project-header {
-          font-size:32px !important;
-    
+    #project-box {
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 100%;
     }
+
+    #project-header {
+        font-size: 28px !important;
+    }
+
     #list-bullet {
-        font-size: 24px !important;
+        font-size: 20px !important;
     }
 
     #breakdown-list a {
         text-decoration: underline;
-        text-decoration-color: #FF6900;
+        text-decoration-color: var(--brand-accent-primary);
+        font-size: 20px;
+    }
+
+    h2#project-header, ul#breakdown-list {
+        margin: 8px;
         font-size: 24px;
     }
 
-
 }
 
+/* Tablet sizes (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
-/* Tablet sizes */
-@media screen 
-and (min-device-width: 760px) 
-and (max-width: 768px) 
-  and (orientation: portrait) { 
-   
+    #project-box {
+        padding-left: 32px;
+        width: 90%;
+    }
 
+    #project-header {
+        font-size: 36px !important;
+    }
 
 }

@@ -1,5 +1,16 @@
 <head>
   <meta charset="UTF-8">
+  <!-- Early theme detection to prevent flash of unstyled content -->
+  <script>
+    (function() {
+      var urlParams = new URLSearchParams(window.location.search);
+      var theme = urlParams.get('theme');
+      var validThemes = ['sea', 'nyc'];
+      if (theme && validThemes.indexOf(theme) !== -1) {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+    })();
+  </script>
   <title> {% if page.title %}{{ page.title }} {% else %} {{ site.title }} {% endif %}</title>
   <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="description" content="{% if page.layout == 'blog' %}{{ page.content | strip_html | truncatewords: 50 }}{% else %}{{site.description}}{% endif %}">
@@ -27,8 +38,10 @@
     <meta name="twitter:image" content="{% if page.image_slug %}{{site.url}}{{page.image_slug}} {% elsif page.image_url %}{{page.image_url}}{% else %}{{ site.url }}/img/general/header.png {% endif %}">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" href="{{ site.baseurl }}/img/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/img/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/img/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/img/favicon/favicon-32x32.png" />
   
   <meta name="application-name" content="&nbsp;"/>
 
@@ -36,15 +49,16 @@
   <meta name="theme-color" content="#FF6900">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/style.css" inline>
-  <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/projects.css" inline>
-  <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/post.css" inline> 
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/projects.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/post.css"> 
 
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
   <!-- Site Javascript-->
-  <script type="text/javascript" src="{{ site.url }}/js/home.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/home.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/theme-toggle.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144168528-1"></script>

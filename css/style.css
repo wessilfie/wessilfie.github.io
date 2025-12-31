@@ -1,23 +1,80 @@
-/* @import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+/* =============================================
+   DESIGN TOKENS - CSS Variables
+   ============================================= */
+
+:root {
+    /* Sydney Metro Theme (Default) */
+    --brand-bg: #FF6900;
+    --brand-text: black;
+    --brand-text-inverse: white;
+    --brand-accent-primary: #FF6900;
+    --nav-arrow-bg: #FF6900;
+    --font-heading: 'Flama', Arial, Helvetica, sans-serif;
+    --font-body: 'Flama', Arial, Helvetica, sans-serif;
+    --platform-label: "Platform";
+    --page-bg: white;
+    --page-bg-dark: black;
 }
 
-@font-face {
-    font-family: 'NewFrank';
-    src: url('../fonts/FrankNew-Regular.woff2') format('woff2'),
-         url('../fonts/FrankNew-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
+/* Sea-Tac Airport Theme */
+[data-theme="sea"] {
+    --brand-bg: #2D2926;
+    --brand-text: #FFFFFF;
+    --brand-text-inverse: #2D2926;
+    --brand-accent-primary: #FFC72C;
+    --nav-arrow-bg: #EB002A;
+    --font-heading: 'Vegur', Arial, Helvetica, sans-serif;
+    --font-body: 'Vegur', Arial, Helvetica, sans-serif;
+    --platform-label: "Gate";
+    --page-bg: #2D2926;
+    --page-bg-dark: #2D2926;
+}
+
+/* NYC Vignelli Subway Theme */
+[data-theme="nyc"] {
+    --brand-bg: #0039A6;
+    --brand-text: #000000;
+    --brand-text-inverse: #FFFFFF;
+    --brand-accent-primary: #0039A6;
+    --nav-arrow-bg: #000000;
+    --font-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --platform-label: "Line";
+    --page-bg: #FFFFFF;
+    --page-bg-dark: #1A1A1A;
+}
+
+/* =============================================
+   FONT FACES
+   ============================================= */
 
 @font-face {
     font-family: 'Flama';
     font-style: normal;
     font-weight: normal;
     src: local('Flama'), url('../fonts/Flama Regular.woff') format('woff');
-    }
+}
+
+@font-face {
+    font-family: 'Vegur';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/Vegur-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Vegur';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Vegur-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Vegur';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Vegur-Light.otf') format('opentype');
+}
 
 * {
     box-sizing: border-box;
@@ -28,21 +85,55 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: Flama, Arial, Helvetica, sans-serif;
+    font-family: var(--font-body);
+}
+
+/* Sea-Tac theme base styles */
+[data-theme="sea"] body,
+body[data-theme="sea"] {
+    background-color: var(--page-bg);
+    color: var(--brand-text);
+}
+
+html[data-theme="sea"] {
+    background-color: var(--page-bg);
+}
+
+/* Sea-Tac Nav Arrow Component */
+.sea-nav-arrow {
+    background-color: var(--nav-arrow-bg);
+    color: white;
+    display: inline-flex;
+    width: 1.5em;
+    height: 1.5em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-right: 4px;
 }
 
 #page-container {
     position: relative;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #content-wrap {
-  padding-bottom: 80px;    /* Footer height */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
-    color: black;
+    color: var(--brand-text);
     font-size: 56px;
+    font-family: var(--font-heading);
+}
+
+[data-theme="sea"] h1 {
+    font-weight: bold;
 }
 
 #navbar {
@@ -52,17 +143,13 @@ h1 {
     top: 0;
     width: 100%;
     height: 80px;
-    background: #FF6900;
+    background: var(--brand-bg);
     vertical-align: middle;
 }
 
 #footer {
-    position: absolute !important; 
-    bottom: 0;
     width: 100%;
-    height: 80px;
-    vertical-align: middle;
-    text-align: right;
+    padding-bottom: 16px;
 }
 
 #footer-links {
@@ -75,7 +162,7 @@ h1 {
 
 #footer-links a {
     text-decoration: none;
-    color: black;
+    color: var(--brand-text);
     font-size: 32px;
     font-weight: 400;
     padding-right: 8px;
@@ -83,7 +170,7 @@ h1 {
 
 .footer-text:hover {
     text-decoration: underline !important;
-    text-decoration-color: #FF6900 !important;
+    text-decoration-color: var(--brand-accent-primary) !important;
 }
 
 #transit-arrow {
@@ -95,7 +182,7 @@ h1 {
     right: 0px;
     padding-right: 32px;
     font-size: 32px;
-    color: black !important;
+    color: var(--brand-text) !important;
 }
 
 .header-text {
@@ -150,9 +237,9 @@ h1 {
 }
 
 #section-break {
-    border-top: 2px solid black;
+    border-top: 2px solid var(--brand-text);
     margin-left: 32px;
-    margin-right: 32px; 
+    margin-right: 32px;
 }
 
 #about-me {
@@ -206,15 +293,17 @@ div#header-and-platform1 {
 }
 
 #contact-box {
-    padding-bottom: 88px;
-    width: 100%;  
+    padding-bottom: 24px;
+    padding-top: 24px;
+    width: 100%;
+    margin-top: auto;
 } 
 
 
 #social-nav-icons {
-    padding-bottom: 48px;
+    padding-bottom: 16px;
     text-align: right;
-    float: right;  
+    float: right;
 } 
 #contact-box h1 {
     text-align: right;
@@ -225,7 +314,7 @@ div#header-and-platform1 {
 }
 
 #contact-text {
-    padding-bottom: 48px;
+    padding-bottom: 16px;
 }
 
 #contact-social {
@@ -259,7 +348,7 @@ div#header-and-platform1 {
 #platform-number {
     font-size: 56px;
     padding-right: 32px !important;
-    color: #FF6900 !important;
+    color: var(--brand-accent-primary) !important;
     font-weight: 500 !important;
 
 }
@@ -268,11 +357,6 @@ div#header-and-platform1 {
     font-size: 32px;
     font-weight: 400;
     padding-left: 0px !important;
-}
-
-#page-container {
-    position: relative;
-    min-height: 100vh;
 }
 
 .nav-social {
@@ -288,7 +372,7 @@ div#header-and-platform1 {
 
 .nav-social a {
     text-decoration: none;
-    color: #FF6900;
+    color: var(--brand-accent-primary);
     font-size: 24px;
     font-weight: 400;
     padding-right: 16px;
@@ -435,9 +519,8 @@ div#header-and-platform1 {
       }
   } 
 
-/* Mobile phone sizes */
-@media screen and (max-width: 480px) 
-  and (orientation: portrait)  { 
+/* Mobile phone sizes (up to 767px) */
+@media screen and (max-width: 767px) {
 
 a#home, a#time {
     font-size: 16px !important;
@@ -449,17 +532,18 @@ a#home, a#time {
 }
 
 #navbar #home {
-    padding-left: 32px;
+    padding-left: 16px;
 }
 
 #intro-section {
     padding-left: 0px;
-    }
+}
 
 #about-me {
-    padding-left: 32px;
-    font-size: 24px;
-    width: 80%;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 20px;
+    width: 100%;
 }
 
 #platform-name, #platform-number {
@@ -474,40 +558,48 @@ div#intro-section {
 
 .flex-container > div {
   width: 100%;
-  /* width: calc(50% - 16px); */
   text-align: center;
   line-height: 75px;
   font-size: 16px;
   height: 32px;
 }
 
-h1#name-header, h2#name-header{
+h1#name-header, h2#name-header {
     font-size: 24px;
 }
 
 #navbar #time {
     right: 0px;
-    padding-right: 32px;
-    font-size: 24px;
+    padding-right: 16px;
+    font-size: 16px;
 }
 
 .navbar-container > div {
     font-size: 16px;
     height: 32px;
-  }
-  .breadcrumb-padding {
-    padding-left: 32px;
+}
+
+.breadcrumb-padding {
+    padding-left: 16px;
 }
 
 #footer {
-    bottom: auto;
+    padding-bottom: 8px;
 }
-#footer-links a {
+
+#section-break {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#contact-box h1 {
     font-size: 24px;
+    padding-right: 16px;
 }
 
-
-
+.nav-social {
+    padding-right: 8px;
+}
 
 }
 
@@ -532,42 +624,54 @@ h1#name-header, h2#name-header{
       }
   } 
 
-/* Tablet sizes */
-@media screen 
-and (min-device-width: 760px) 
-and (max-width: 768px) 
-  and (orientation: portrait) { 
-   
-   .flex-container > div {
-    width: 100%;
-    padding-bottom: 56px;
-} 
+/* Tablet sizes (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
 
-#platform-name, #platform-number {
-    display: none;
-}
-div#platform-container {
-    display: none;
-}
+    .flex-container > div {
+        width: 100%;
+        padding-bottom: 24px;
+    }
 
-#navbar #time {
-    right: 0px;
-    padding-right: 32px;
-    font-size: 24px !important;
-}
+    #platform-name, #platform-number {
+        display: none;
+    }
+
+    div#platform-container {
+        display: none;
+    }
+
+    #navbar #time {
+        right: 0px;
+        padding-right: 32px;
+        font-size: 24px;
+    }
+
+    #about-me {
+        font-size: 32px;
+        width: 80%;
+    }
+
+    .blog-box {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    h1#name-header {
+        font-size: 40px;
+    }
 
 }
 
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: black;
+        background-color: var(--page-bg-dark);
         color: white;
     }
-    
+
     p {
         color: white;
     }
-    
+
     #breakdown-list a {
         color: white !important;
     }
@@ -580,4 +684,205 @@ div#platform-container {
     #interact {
         color: #EBE8E4;
     }
-  }
+}
+
+/* =============================================
+   SEA-TAC THEME OVERRIDES
+   ============================================= */
+
+[data-theme="sea"] {
+    background-color: var(--page-bg);
+}
+
+[data-theme="sea"] html,
+[data-theme="sea"] body {
+    background-color: var(--page-bg);
+    color: var(--brand-text);
+}
+
+[data-theme="sea"] p {
+    color: var(--brand-text);
+}
+
+[data-theme="sea"] h1,
+[data-theme="sea"] h2,
+[data-theme="sea"] h3 {
+    color: var(--brand-text);
+    font-family: var(--font-heading);
+}
+
+[data-theme="sea"] #name-header {
+    font-weight: bold;
+}
+
+[data-theme="sea"] #about-me {
+    color: var(--brand-text);
+}
+
+[data-theme="sea"] #section-break {
+    border-top: 2px solid var(--brand-text);
+}
+
+[data-theme="sea"] #breakdown-list a {
+    color: var(--brand-text) !important;
+}
+
+[data-theme="sea"] #breakdown-list a:hover {
+    text-decoration-color: var(--brand-accent-primary);
+}
+
+/* Sea-Tac Transit Arrow styling */
+[data-theme="sea"] #transit-arrow {
+    background-color: var(--nav-arrow-bg);
+    color: white;
+    display: inline-flex;
+    width: 1.2em;
+    height: 1.2em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 24px;
+    margin-right: 4px;
+}
+
+/* Sea-Tac logo styling */
+[data-theme="sea"] #img-box img {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(5deg);
+}
+
+/* Platform label becomes Gate for Sea-Tac */
+[data-theme="sea"] #platform-name::after {
+    content: " SEA";
+}
+
+[data-theme="sea"] #platform-name {
+    visibility: hidden;
+    position: relative;
+}
+
+[data-theme="sea"] #platform-name::before {
+    content: "Gate";
+    visibility: visible;
+    position: absolute;
+    right: 0;
+}
+
+/* Sea-Tac number styling */
+[data-theme="sea"] #platform-number {
+    visibility: hidden;
+    position: relative;
+}
+
+[data-theme="sea"] #platform-number::before {
+    content: "SEA";
+    visibility: visible;
+    position: absolute;
+    right: 0;
+}
+
+/* =============================================
+   NYC VIGNELLI SUBWAY THEME OVERRIDES
+   ============================================= */
+
+[data-theme="nyc"] {
+    background-color: var(--page-bg);
+}
+
+[data-theme="nyc"] html,
+[data-theme="nyc"] body {
+    background-color: var(--page-bg);
+    color: var(--brand-text);
+}
+
+[data-theme="nyc"] p {
+    color: var(--brand-text);
+}
+
+[data-theme="nyc"] h1,
+[data-theme="nyc"] h2,
+[data-theme="nyc"] h3 {
+    color: var(--brand-text);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+[data-theme="nyc"] #name-header {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+[data-theme="nyc"] #about-me {
+    color: var(--brand-text);
+}
+
+[data-theme="nyc"] #section-break {
+    border-top: 3px solid var(--brand-text);
+}
+
+[data-theme="nyc"] #breakdown-list a {
+    color: var(--brand-text) !important;
+}
+
+[data-theme="nyc"] #breakdown-list a:hover {
+    text-decoration-color: var(--brand-accent-primary);
+}
+
+/* NYC Transit Arrow styling - Vignelli bullet style */
+[data-theme="nyc"] #transit-arrow {
+    background-color: var(--brand-accent-primary);
+    color: white;
+    display: inline-flex;
+    width: 1.4em;
+    height: 1.4em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+/* NYC bullet nav style */
+[data-theme="nyc"] .nav-social a {
+    color: var(--brand-accent-primary);
+}
+
+/* Platform label becomes Line for NYC */
+[data-theme="nyc"] #platform-name {
+    visibility: hidden;
+    position: relative;
+}
+
+[data-theme="nyc"] #platform-name::before {
+    content: "Line";
+    visibility: visible;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* NYC line number styling - subway bullet */
+[data-theme="nyc"] #platform-number {
+    background-color: var(--brand-accent-primary);
+    color: white;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+/* NYC link styling */
+[data-theme="nyc"] a {
+    color: var(--brand-accent-primary);
+    text-decoration: none;
+}
+
+[data-theme="nyc"] a:hover {
+    text-decoration: underline;
+}
