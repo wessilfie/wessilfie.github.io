@@ -73,7 +73,7 @@ body[data-theme="sea"] {
   content: "Gate";
   visibility: visible;
   position: absolute;
-  right: 32px;
+  right: 0;
 }
 
 [data-theme="sea"] #platform-number {
@@ -85,7 +85,7 @@ body[data-theme="sea"] {
   content: "A7";
   visibility: visible;
   position: absolute;
-  right: 32px;
+  right: 0;
 }
 
 [data-theme="sea"] #section-break {
@@ -335,7 +335,6 @@ body {
   font-size: 56px;
   font-weight: 500;
   margin: 0;
-  padding-right: 32px;
   color: var(--brand-text);
 }
 
@@ -352,7 +351,6 @@ body {
   font-weight: 500;
   color: var(--brand-accent-primary);
   margin: 0;
-  padding-right: 32px;
 }
 
 /* =============================================
