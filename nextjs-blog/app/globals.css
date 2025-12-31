@@ -1,0 +1,930 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================================
+   DESIGN TOKENS - CSS Variables (Sydney Metro Theme)
+   ============================================= */
+
+:root {
+  --brand-bg: #FF6900;
+  --brand-text: black;
+  --brand-text-inverse: white;
+  --brand-accent-primary: #FF6900;
+  --nav-arrow-bg: #FF6900;
+  --font-heading: 'Flama', Arial, Helvetica, sans-serif;
+  --font-body: 'Flama', Arial, Helvetica, sans-serif;
+  --page-bg: white;
+  --page-bg-dark: black;
+  --platform-label: "Platform";
+  --platform-number: "1";
+}
+
+/* =============================================
+   SEA-TAC AIRPORT THEME
+   ============================================= */
+
+[data-theme="sea"] {
+  --brand-bg: #2D2926;
+  --brand-text: #FFFFFF;
+  --brand-text-inverse: #2D2926;
+  --brand-accent-primary: #FFC72C;
+  --nav-arrow-bg: #EB002A;
+  --font-heading: 'Vegur', Arial, Helvetica, sans-serif;
+  --font-body: 'Vegur', Arial, Helvetica, sans-serif;
+  --page-bg: #2D2926;
+  --page-bg-dark: #2D2926;
+  --platform-label: "Gate";
+  --platform-number: "A7";
+}
+
+[data-theme="sea"] html,
+[data-theme="sea"] body,
+html[data-theme="sea"],
+body[data-theme="sea"] {
+  background-color: var(--page-bg);
+  color: var(--brand-text);
+}
+
+[data-theme="sea"] #name-header {
+  font-weight: bold;
+  font-family: var(--font-heading);
+}
+
+[data-theme="sea"] .transit-arrow {
+  background-color: var(--nav-arrow-bg);
+  color: white;
+  display: inline-flex;
+  width: 1.4em;
+  height: 1.4em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 0.8em;
+  margin-right: 8px;
+}
+
+[data-theme="sea"] #platform-name {
+  visibility: hidden;
+  position: relative;
+}
+
+[data-theme="sea"] #platform-name::before {
+  content: "Gate";
+  visibility: visible;
+  position: absolute;
+  right: 32px;
+}
+
+[data-theme="sea"] #platform-number {
+  visibility: hidden;
+  position: relative;
+}
+
+[data-theme="sea"] #platform-number::before {
+  content: "A7";
+  visibility: visible;
+  position: absolute;
+  right: 32px;
+}
+
+[data-theme="sea"] #section-break {
+  border-top-color: var(--brand-text);
+}
+
+[data-theme="sea"] #breakdown-list a,
+[data-theme="sea"] .nav-link-item a {
+  color: var(--brand-text);
+}
+
+[data-theme="sea"] #breakdown-list a:hover,
+[data-theme="sea"] .nav-link-item a:hover {
+  text-decoration-color: var(--brand-accent-primary);
+}
+
+[data-theme="sea"] .blog-box,
+[data-theme="sea"] #about-me {
+  color: var(--brand-text);
+}
+
+[data-theme="sea"] .blog-box a {
+  color: var(--brand-text);
+  text-decoration-color: var(--brand-accent-primary);
+}
+
+[data-theme="sea"] a.link-tpt,
+[data-theme="sea"] a.link-columbia,
+[data-theme="sea"] a.link-bankrate {
+  color: var(--brand-accent-primary) !important;
+}
+
+/* Sea-Tac footer styling */
+[data-theme="sea"] .footer-right a,
+[data-theme="sea"] .footer-name {
+  color: var(--brand-text);
+}
+
+[data-theme="sea"] .footer-right a:hover {
+  text-decoration-color: var(--brand-accent-primary);
+}
+
+[data-theme="sea"] .theme-button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="sea"] .theme-name,
+[data-theme="sea"] .theme-label {
+  color: var(--brand-text);
+}
+
+[data-theme="sea"] .section-icon {
+  color: var(--brand-accent-primary);
+}
+
+/* Sea-Tac logo styling */
+[data-theme="sea"] #img-box img {
+  content: url('/img/transitlogos/we-sea.svg');
+}
+
+/* Sea-Tac red square arrow box */
+[data-theme="sea"] .sea-arrow-box {
+  background-color: #EB002A;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =============================================
+   FONT FACES
+   ============================================= */
+
+@font-face {
+  font-family: 'Flama';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/Flama Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Vegur';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/Vegur-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Vegur';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/Vegur-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Vegur';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/Vegur-Light.otf') format('opentype');
+}
+
+/* =============================================
+   BASE STYLES
+   ============================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--page-bg);
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: var(--font-body);
+  background-color: var(--page-bg);
+  color: var(--brand-text);
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#content-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =============================================
+   NAVBAR
+   ============================================= */
+
+#navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--brand-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 100;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-left a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left svg {
+  fill: white;
+}
+
+.breadcrumb-separator {
+  color: white;
+  font-size: 24px;
+  margin: 0 4px;
+}
+
+.breadcrumb-link {
+  color: white !important;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+#navbar a:hover {
+  opacity: 0.9;
+}
+
+#navbar #time {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* =============================================
+   INTRO SECTION (Header with Logo)
+   ============================================= */
+
+#intro-section {
+  padding: 16px 32px 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+#img-box {
+  height: 112px;
+  width: 112px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+#img-box img {
+  max-height: 112px;
+  max-width: 112px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  height: 112px;
+  align-content: center;
+}
+
+.flex-container > div {
+  width: 50%;
+  line-height: 1.2;
+}
+
+#name-header {
+  font-size: 56px;
+  margin: 0;
+  padding: 0;
+  color: var(--brand-text);
+  font-family: var(--font-heading);
+  font-weight: bold;
+}
+
+#platform-name {
+  text-align: right;
+  font-size: 56px;
+  font-weight: 500;
+  margin: 0;
+  padding-right: 32px;
+  color: var(--brand-text);
+}
+
+#via-city {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
+  color: var(--brand-text);
+}
+
+#platform-number {
+  text-align: right;
+  font-size: 56px;
+  font-weight: 500;
+  color: var(--brand-accent-primary);
+  margin: 0;
+  padding-right: 32px;
+}
+
+/* =============================================
+   SECTION BREAK
+   ============================================= */
+
+#section-break-head {
+  width: 100%;
+  padding-top: 16px;
+}
+
+#section-break {
+  border-top: 2px solid var(--brand-text);
+  margin: 0 32px;
+}
+
+/* =============================================
+   ABOUT ME
+   ============================================= */
+
+#about-me {
+  padding: 0 32px;
+  font-size: 40px;
+  width: 64%;
+  line-height: 1.4;
+}
+
+#about-me p {
+  margin: 24px 0;
+}
+
+/* Colored links */
+a.link-tpt {
+  color: #0aa96c !important;
+  text-decoration: none;
+}
+a.link-tpt:hover {
+  text-decoration: underline;
+  text-decoration-color: #0aa96c !important;
+}
+
+a.link-interact {
+  color: #3a3836;
+  text-decoration: none;
+}
+a.link-interact:hover {
+  text-decoration: underline;
+  text-decoration-color: #3a3836;
+}
+
+a.link-columbia {
+  color: #9BDFFF;
+  text-decoration: none;
+}
+a.link-columbia:hover {
+  text-decoration: underline;
+  text-decoration-color: #9BDFFF;
+}
+
+a.link-bankrate {
+  color: #003057;
+  text-decoration: none;
+}
+a.link-bankrate:hover {
+  text-decoration: underline;
+  text-decoration-color: #003057;
+}
+
+/* =============================================
+   NAVIGATION LINKS (Above the fold)
+   ============================================= */
+
+#navigation-links {
+  margin-top: 16px;
+}
+
+#nav-links-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 32px;
+  flex-wrap: wrap;
+}
+
+.nav-link-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link-item .transit-arrow {
+  font-size: 32px;
+  margin-right: 8px;
+  color: var(--brand-text);
+}
+
+.nav-link-item a {
+  text-decoration: none;
+  color: var(--brand-text);
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.nav-link-item a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--brand-accent-primary);
+}
+
+/* =============================================
+   FOOTER (schlosser.io style - left/right layout)
+   ============================================= */
+
+#footer-wrapper {
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.footer-name,
+.footer-right a {
+  font-family: var(--font-body);
+}
+
+#footer {
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  min-height: 80px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+}
+
+.footer-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--brand-text);
+  font-family: var(--font-heading);
+  line-height: 1.4;
+}
+
+/* Hide mobile break on desktop, show space */
+.mobile-break {
+  display: none;
+}
+
+.desktop-space {
+  display: inline;
+}
+
+.footer-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-right a {
+  color: var(--brand-text);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--brand-accent-primary);
+}
+
+.footer-dot {
+  color: var(--brand-text);
+  opacity: 0.4;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* =============================================
+   THEME SWITCHER
+   ============================================= */
+
+#theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  justify-content: flex-end;
+}
+
+.theme-label {
+  font-size: 14px;
+  color: var(--brand-text);
+  opacity: 0.6;
+}
+
+.theme-options {
+  display: flex;
+  gap: 8px;
+}
+
+.theme-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 2px solid transparent;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+
+.theme-button:hover {
+  border-color: var(--theme-color);
+}
+
+.theme-button.active {
+  border-color: var(--theme-color);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.theme-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--theme-color);
+}
+
+.theme-name {
+  font-size: 14px;
+  color: var(--brand-text);
+}
+
+/* =============================================
+   POSTS/PROJECTS LIST
+   ============================================= */
+
+#posts-box, #project-box {
+  padding: 32px;
+}
+
+#posts-box h2, #project-box h2 {
+  font-size: 40px;
+  margin-bottom: 24px;
+  color: var(--brand-text);
+}
+
+#breakdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#breakdown-list li {
+  padding: 8px 0;
+  font-size: 24px;
+}
+
+#breakdown-list a {
+  color: var(--brand-text);
+  text-decoration: none;
+}
+
+#breakdown-list a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--brand-accent-primary);
+}
+
+/* External link icon */
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.external-link-icon {
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+/* Section icons for Sea-Tac theme */
+.section-icon {
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+/* =============================================
+   BLOG POST STYLES
+   ============================================= */
+
+.blog-info {
+  text-align: center;
+  padding: 24px;
+}
+
+.blog-title {
+  font-size: 56px;
+  margin: 0 0 8px;
+  color: var(--brand-text);
+  font-family: var(--font-heading);
+}
+
+.published-date {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  color: var(--brand-text);
+  opacity: 0.8;
+}
+
+.blog-banner-image {
+  width: 100%;
+  display: block;
+}
+
+.blog-box {
+  padding: 32px 128px;
+  font-size: 24px;
+  line-height: 1.6;
+  color: var(--brand-text);
+}
+
+.blog-box a {
+  color: var(--brand-text);
+  text-decoration: underline;
+  text-decoration-color: var(--brand-accent-primary);
+}
+
+.blog-box h2, .blog-box h3 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.blog-box p {
+  margin-bottom: 24px;
+}
+
+.blog-box blockquote {
+  border-left: 4px solid var(--brand-accent-primary);
+  padding-left: 24px;
+  margin: 24px 0;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.blog-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 24px auto;
+}
+
+.button {
+  background-color: var(--brand-accent-primary);
+  border: none;
+  color: var(--brand-text-inverse);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-block;
+  font-size: 16px;
+  margin: 16px 0;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* =============================================
+   DARK MODE (System preference)
+   ============================================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-bg: black;
+    --brand-text: white;
+  }
+
+  html, body {
+    background-color: var(--page-bg-dark);
+    color: white;
+  }
+
+  #name-header, .blog-title, #breakdown-list a, .nav-link-item a {
+    color: white;
+  }
+
+  #section-break {
+    border-top-color: white;
+  }
+
+  a.link-interact {
+    color: #EBE8E4;
+  }
+
+  .blog-box a {
+    color: white;
+  }
+
+  #platform-name, #via-city, #contact-box h2 {
+    color: white;
+  }
+}
+
+/* =============================================
+   MOBILE RESPONSIVE
+   ============================================= */
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    padding: 0 16px;
+  }
+
+  #navbar #time {
+    font-size: 16px;
+  }
+
+  .navbar-left svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  #intro-section {
+    padding: 16px;
+  }
+
+  #img-box {
+    height: 64px;
+    width: 64px;
+  }
+
+  #img-box img {
+    max-height: 64px;
+    max-width: 64px;
+  }
+
+  #name-header {
+    font-size: 28px;
+  }
+
+  #platform-name, #platform-number {
+    display: none;
+  }
+
+  #via-city {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  #about-me {
+    font-size: 24px;
+    width: 90%;
+    padding: 0 16px;
+  }
+
+  #nav-links-container {
+    padding: 8px 16px;
+    gap: 12px;
+  }
+
+  .nav-link-item .transit-arrow {
+    font-size: 20px;
+  }
+
+  .nav-link-item a {
+    font-size: 20px;
+  }
+
+  .blog-title {
+    font-size: 32px;
+  }
+
+  .blog-box {
+    padding: 16px 32px;
+    font-size: 18px;
+  }
+
+  #breakdown-list li {
+    font-size: 18px;
+  }
+
+  #footer-wrapper {
+    margin-top: auto;
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+
+  #footer {
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .footer-name {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  .mobile-break {
+    display: block;
+  }
+
+  .desktop-space {
+    display: none;
+  }
+
+  .footer-right {
+    gap: 4px 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .footer-right a {
+    font-size: 16px;
+    padding: 8px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-dot {
+    display: inline;
+    font-size: 16px;
+  }
+
+  #theme-switcher {
+    padding: 16px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .theme-button {
+    padding: 8px 12px;
+    min-height: 44px;
+    flex-shrink: 0;
+  }
+
+  .theme-name {
+    display: none;
+  }
+
+  .theme-dot {
+    width: 16px;
+    height: 16px;
+  }
+
+  .theme-options {
+    flex-wrap: nowrap;
+  }
+}
+
+/* =============================================
+   NO SELECT UTILITY
+   ============================================= */
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
