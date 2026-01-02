@@ -3,16 +3,24 @@
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import MTACountdown from "./MTACountdown";
 
 interface HeaderProps {
   showBio?: boolean;
+  showCountdown?: boolean;
 }
 
-function HeaderContent({ showBio = true }: HeaderProps) {
+function HeaderContent({ showBio = true, showCountdown = false }: HeaderProps) {
   const searchParams = useSearchParams();
   const currentTheme = searchParams.get("theme") || "";
 
-  const cityText = currentTheme === "sea" ? "via Seattle, WA" : "via New York, NY";
+  // Location text based on theme
+  let cityText = "via New York, NY";
+  if (currentTheme === "sea") {
+    cityText = "via Seattle, WA";
+  } else if (currentTheme === "nyc") {
+    cityText = "Downtown & Brooklyn";
+  }
 
   return (
     <>
@@ -52,9 +60,10 @@ function HeaderContent({ showBio = true }: HeaderProps) {
         </div>
       </div>
 
-      {/* Section Break */}
-      <div id="section-break-head">
+      {/* Section Break with hanging countdown */}
+      <div id="section-break-head" className="section-break-container">
         <div id="section-break"></div>
+        {showCountdown && <MTACountdown />}
       </div>
 
       {/* About Me */}
@@ -98,7 +107,7 @@ function HeaderContent({ showBio = true }: HeaderProps) {
   );
 }
 
-export default function Header({ showBio = true }: HeaderProps) {
+export default function Header({ showBio = true, showCountdown = false }: HeaderProps) {
   return (
     <Suspense fallback={
       <>
@@ -156,7 +165,7 @@ export default function Header({ showBio = true }: HeaderProps) {
         )}
       </>
     }>
-      <HeaderContent showBio={showBio} />
+      <HeaderContent showBio={showBio} showCountdown={showCountdown} />
     </Suspense>
   );
 }

@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <circle cx="50" cy="50" r="48" fill="#EE352E"/>
-  <text x="50" y="62" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="36" font-weight="500" fill="#FFFFFF" text-anchor="middle">WE</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112" width="112" height="112">
+  <!-- Black circle background (MTA style) -->
+  <circle cx="56" cy="56" r="54" fill="#000000"/>
+
+  <!-- White "WE" text - clean, bold, centered -->
+  <text
+    x="56"
+    y="72"
+    font-family="Helvetica, Arial, sans-serif"
+    font-size="52"
+    font-weight="bold"
+    fill="#FFFFFF"
+    text-anchor="middle"
+    letter-spacing="-2"
+  >WE</text>
 </svg>

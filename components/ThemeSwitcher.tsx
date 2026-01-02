@@ -6,6 +6,7 @@ import { Suspense } from "react";
 const themes = [
   { id: "", label: "Sydney Metro", color: "#FF6900" },
   { id: "sea", label: "Sea-Tac Airport", color: "#EB002A" },
+  { id: "nyc", label: "NYC Subway", color: "#0062CF" },
 ];
 
 function ThemeSwitcherContent() {

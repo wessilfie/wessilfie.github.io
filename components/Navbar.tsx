@@ -18,8 +18,8 @@ function NavbarContent({ breadcrumb, breadcrumbHref }: NavbarProps) {
     const updateTime = () => {
       const date = new Date();
 
-      if (theme === "sea") {
-        // 12-hour format for Sea-Tac
+      if (theme === "sea" || theme === "nyc") {
+        // 12-hour format for Sea-Tac and NYC
         let hour = date.getHours();
         const ampm = hour >= 12 ? "PM" : "AM";
         hour = hour % 12;
@@ -48,12 +48,19 @@ function NavbarContent({ breadcrumb, breadcrumbHref }: NavbarProps) {
     return href;
   };
 
+  // Determine arrow box class based on theme
+  const getArrowBoxClass = () => {
+    if (theme === "sea") return "sea-arrow-box";
+    if (theme === "nyc") return "nyc-arrow-box";
+    return "";
+  };
+
   return (
     <nav id="navbar">
       <div className="navbar-left">
-        <Link href={getHref("/")} className={`noselect ${theme === "sea" ? "sea-arrow-box" : ""}`}>
-          {theme === "sea" ? (
-            /* Simple Arrow for Sea-Tac (inside red square via CSS) */
+        <Link href={getHref("/")} className={`noselect ${getArrowBoxClass()}`}>
+          {theme === "sea" || theme === "nyc" ? (
+            /* Simple Arrow for Sea-Tac and NYC (inside colored square via CSS) */
             <svg
               width="24"
               height="24"

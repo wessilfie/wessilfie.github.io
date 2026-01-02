@@ -9,9 +9,9 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
   useEffect(() => {
     const theme = searchParams.get("theme");
 
-    if (theme === "sea") {
-      document.documentElement.setAttribute("data-theme", "sea");
-      document.body.setAttribute("data-theme", "sea");
+    if (theme === "sea" || theme === "nyc") {
+      document.documentElement.setAttribute("data-theme", theme);
+      document.body.setAttribute("data-theme", theme);
     } else {
       document.documentElement.removeAttribute("data-theme");
       document.body.removeAttribute("data-theme");

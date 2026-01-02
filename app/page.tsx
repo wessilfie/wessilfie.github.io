@@ -7,7 +7,7 @@ export default function Home() {
     <div id="page-container">
       <div id="content-wrap">
         <Navbar />
-        <Header showBio={true} />
+        <Header showBio={true} showCountdown={true} />
         <Footer />
       </div>
     </div>
