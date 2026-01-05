@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Will Essilfie",
     locale: "en_US",
     type: "website",
-    images: ["/img/general/header.png"],
+    images: ["/img/general/header-mta.png"],
   },
   twitter: {
     card: "summary_large_image",
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     description:
       "Lead Product Manager at TPT and MBA Candidate at Columbia Business School.",
     creator: "@dearfirstyear",
+    images: ["/img/general/header-mta.png"],
   },
   other: {
     "theme-color": "#FF6900",

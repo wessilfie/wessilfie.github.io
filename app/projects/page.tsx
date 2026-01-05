@@ -9,6 +9,7 @@ import Header from "@/components/Header";
 
 // Project data with internal links
 const projects = [
+  { title: "Enyo App", slug: "enyo" },
   { title: "Dear First Year", slug: "dearfirstyear" },
   { title: "Will's Favorite Recipes", slug: "favoriterecipes" },
   { title: "Product Management Resources", slug: "productresources" },

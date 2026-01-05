@@ -1,0 +1,109 @@
+<svg width="800" height="300" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background - light gray/cream like the map -->
+  <rect width="800" height="300" fill="#F5F5F0"/>
+
+  <!-- RED LINE (1/2/3) - vertical, goes straight down -->
+  <path d="M80 0 L80 300"
+        stroke="#EE352E" stroke-width="12" fill="none"/>
+
+  <!-- ORANGE LINE (B/D/F/M) - parallel to red, curves right -->
+  <path d="M105 0 L105 155 Q105 195, 145 195 L800 195"
+        stroke="#FF6319" stroke-width="12" fill="none"/>
+
+  <!-- BLUE LINE (A/C/E) - parallel, curves right -->
+  <path d="M130 0 L130 130 Q130 170, 170 170 L800 170"
+        stroke="#0039A6" stroke-width="12" fill="none"/>
+
+  <!-- GREEN LINE (4/5/6) - comes from bottom, curves right -->
+  <path d="M250 300 L250 120 Q250 80, 290 80 L800 80"
+        stroke="#00933C" stroke-width="12" fill="none"/>
+
+  <!-- LIGHT GREEN (G) - parallel -->
+  <path d="M275 300 L275 145 Q275 105, 315 105 L800 105"
+        stroke="#6CBE45" stroke-width="12" fill="none"/>
+
+  <!-- PURPLE LINE (7) - horizontal across middle -->
+  <path d="M0 145 L350 145 Q390 145, 390 185 L390 300"
+        stroke="#B933AD" stroke-width="12" fill="none"/>
+
+  <!-- YELLOW LINE (N/Q/R/W) - curves down instead of dots -->
+  <path d="M0 250 L200 250 Q240 250, 240 290 L240 300"
+        stroke="#FCCC0A" stroke-width="12" fill="none"/>
+
+  <!-- GRAY LINE (L) -->
+  <path d="M0 55 L500 55 Q540 55, 540 95 L540 300"
+        stroke="#A7A9AC" stroke-width="12" fill="none"/>
+
+  <!-- Station dots - all same size, positioned on lines -->
+  <circle cx="80" cy="100" r="6" fill="white" stroke="black" stroke-width="2"/>   <!-- Red line -->
+  <circle cx="80" cy="200" r="6" fill="white" stroke="black" stroke-width="2"/>   <!-- Red line -->
+  <circle cx="250" cy="200" r="6" fill="white" stroke="black" stroke-width="2"/>  <!-- Green line -->
+  <circle cx="200" cy="145" r="6" fill="white" stroke="black" stroke-width="2"/>  <!-- Purple line -->
+  <circle cx="300" cy="55" r="6" fill="white" stroke="black" stroke-width="2"/>   <!-- Gray L line -->
+  <circle cx="400" cy="170" r="6" fill="white" stroke="black" stroke-width="2"/>  <!-- Blue line -->
+  <circle cx="500" cy="195" r="6" fill="white" stroke="black" stroke-width="2"/>  <!-- Orange line -->
+
+  <!-- ========== WILL on line 1 ========== -->
+
+  <!-- W bullet (yellow - N/Q/R/W line) -->
+  <circle cx="590" cy="28" r="18" fill="#FCCC0A"/>
+  <text x="590" y="35" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="black" text-anchor="middle">W</text>
+
+  <!-- I bullet (black) -->
+  <circle cx="632" cy="28" r="18" fill="#000000"/>
+  <text x="632" y="35" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">I</text>
+
+  <!-- L bullet (gray - L line) -->
+  <circle cx="674" cy="28" r="18" fill="#A7A9AC"/>
+  <text x="674" y="35" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">L</text>
+
+  <!-- L bullet (gray - L line) -->
+  <circle cx="716" cy="28" r="18" fill="#A7A9AC"/>
+  <text x="716" y="35" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">L</text>
+
+  <!-- ========== ESSILFIE on line 2 ========== -->
+
+  <!-- E bullet (blue - A/C/E line) -->
+  <circle cx="464" cy="70" r="18" fill="#0039A6"/>
+  <text x="464" y="77" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">E</text>
+
+  <!-- S bullet (gray - S shuttle) -->
+  <circle cx="506" cy="70" r="18" fill="#808183"/>
+  <text x="506" y="77" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">S</text>
+
+  <!-- S bullet (gray - S shuttle) -->
+  <circle cx="548" cy="70" r="18" fill="#808183"/>
+  <text x="548" y="77" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">S</text>
+
+  <!-- I bullet (black) -->
+  <circle cx="590" cy="70" r="18" fill="#000000"/>
+  <text x="590" y="77" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">I</text>
+
+  <!-- L bullet (gray - L line) -->
+  <circle cx="632" cy="70" r="18" fill="#A7A9AC"/>
+  <text x="632" y="77" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">L</text>
+
+  <!-- F bullet (orange - B/D/F/M line) -->
+  <circle cx="674" cy="70" r="18" fill="#FF6319"/>
+  <text x="674" y="77" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">F</text>
+
+  <!-- I bullet (black) -->
+  <circle cx="716" cy="70" r="18" fill="#000000"/>
+  <text x="716" y="77" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">I</text>
+
+  <!-- E bullet (blue - A/C/E line) -->
+  <circle cx="758" cy="70" r="18" fill="#0039A6"/>
+  <text x="758" y="77" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="900" fill="white" text-anchor="middle">E</text>
+</svg>
