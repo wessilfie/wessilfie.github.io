@@ -141,11 +141,6 @@ body[data-theme="sea"] {
   color: var(--brand-accent-primary);
 }
 
-/* Sea-Tac logo styling */
-[data-theme="sea"] #img-box img {
-  content: url('/img/transitlogos/we-sea.svg');
-}
-
 /* Sea-Tac red square arrow box */
 [data-theme="sea"] .sea-arrow-box {
   background-color: #EB002A;
@@ -202,16 +197,12 @@ body[data-theme="nyc"] {
   letter-spacing: -0.02em;
 }
 
-/* NYC Logo swap */
-[data-theme="nyc"] #img-box img {
-  content: url('/img/transitlogos/we-nyc.svg');
-}
-
 /* NYC Name header typography */
 [data-theme="nyc"] #name-header {
   font-family: var(--font-heading);
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: var(--brand-text);
 }
 
 /* NYC Platform becomes Station Sign */
@@ -225,6 +216,7 @@ body[data-theme="nyc"] {
   visibility: visible;
   position: absolute;
   right: 0;
+  color: var(--brand-text);
   font-family: var(--font-heading);
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -253,6 +245,11 @@ body[data-theme="nyc"] {
   font-size: 36px;
   border: none;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+[data-theme="nyc"] #via-city,
+[data-theme="nyc"] #contact-box h2 {
+  color: var(--brand-text);
 }
 
 /* NYC Section dividers - heavy 3px black lines */

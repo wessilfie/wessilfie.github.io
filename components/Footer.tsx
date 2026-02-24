@@ -30,7 +30,7 @@ function FooterContent() {
           <span className="footer-dot">·</span>
           <a href="https://instagram.com/wessilfie" target="_blank" rel="noopener noreferrer">Instagram</a>
           <span className="footer-dot">·</span>
-          <a href="mailto:will@essilfie.com">Email</a>
+          <a href="mailto:will.essilfie@mac.com">Email</a>
         </nav>
       </footer>
     </div>
@@ -67,7 +67,7 @@ export default function Footer() {
             <span className="footer-dot">·</span>
             <a href="https://instagram.com/wessilfie" target="_blank" rel="noopener noreferrer">Instagram</a>
             <span className="footer-dot">·</span>
-            <a href="mailto:will@essilfie.com">Email</a>
+            <a href="mailto:will.essilfie@mac.com">Email</a>
           </nav>
         </footer>
       </div>

@@ -13,6 +13,11 @@ interface HeaderProps {
 function HeaderContent({ showBio = true, showCountdown = false }: HeaderProps) {
   const searchParams = useSearchParams();
   const currentTheme = searchParams.get("theme") || "";
+  const logoSrc = currentTheme === "sea"
+    ? "/img/transitlogos/we-sea.svg"
+    : currentTheme === "nyc"
+      ? "/img/transitlogos/we-nyc.svg"
+      : "/img/transitlogos/we.svg";
 
   // Location text based on theme
   let cityText = "via New York, NY";
@@ -29,7 +34,7 @@ function HeaderContent({ showBio = true, showCountdown = false }: HeaderProps) {
         <div id="img-box">
           <Image
             className="noselect"
-            src="/img/transitlogos/we.svg"
+            src={logoSrc}
             alt="essilfie.com logo"
             width={112}
             height={112}

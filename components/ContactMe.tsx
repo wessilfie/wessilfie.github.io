@@ -59,7 +59,7 @@ export default function ContactMe() {
         </li>
         <li>
           <a
-            href="mailto:will@essilfie.com"
+            href="mailto:will.essilfie@mac.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Email"
