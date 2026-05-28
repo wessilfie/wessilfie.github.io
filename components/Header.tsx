@@ -84,7 +84,7 @@ function HeaderContent({ showBio = true, showCountdown = false }: HeaderProps) {
             >
               TPT
             </a>{" "}
-            (Core Marketplace), an Executive MBA candidate at{" "}
+            (Core Marketplace) and recent MBA graduate from{" "}
             <a
               className="link-columbia"
               href="https://business.columbia.edu"
@@ -92,15 +92,6 @@ function HeaderContent({ showBio = true, showCountdown = false }: HeaderProps) {
               rel="noopener noreferrer"
             >
               Columbia Business School
-            </a>
-            , and a freelance writer for{" "}
-            <a
-              className="link-bankrate"
-              href="https://www.bankrate.com/authors/will-essilfie/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Bankrate
             </a>
             . I care about using technology and AI to create experiences that
             bring people together in the real world, something I explore through
@@ -158,10 +149,8 @@ export default function Header({ showBio = true, showCountdown = false }: Header
             <p>
               I&apos;m a Lead Product Manager at{" "}
               <a className="link-tpt" href="https://www.teacherspayteachers.com" target="_blank" rel="noopener noreferrer">TPT</a>{" "}
-              (Core Marketplace), an Executive MBA candidate at{" "}
+              (Core Marketplace) and recent MBA graduate from{" "}
               <a className="link-columbia" href="https://business.columbia.edu" target="_blank" rel="noopener noreferrer">Columbia Business School</a>
-              , and a freelance writer for{" "}
-              <a className="link-bankrate" href="https://www.bankrate.com/authors/will-essilfie/" target="_blank" rel="noopener noreferrer">Bankrate</a>
               . I care about using technology and AI to create experiences that
               bring people together in the real world, something I explore through
               travel, theater, and writing my first play.

@@ -5,7 +5,7 @@ import ThemeWrapper from "@/components/ThemeWrapper";
 export const metadata: Metadata = {
   title: "Will Essilfie",
   description:
-    "Lead Product Manager at TPT and MBA Candidate at Columbia Business School. Previously a Data Scientist, Editor in Chief, and freelance writer.",
+    "Lead Product Manager at TPT and recent MBA graduate from Columbia Business School. I care about using technology and AI to create experiences that bring people together in the real world.",
   icons: {
     icon: [
       { url: "/img/favicon/favicon.ico", sizes: "any" },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Will Essilfie",
     description:
-      "Lead Product Manager at TPT and MBA Candidate at Columbia Business School.",
+      "Lead Product Manager at TPT and recent MBA graduate from Columbia Business School.",
     url: "https://essilfie.com",
     siteName: "Will Essilfie",
     locale: "en_US",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Will Essilfie",
     description:
-      "Lead Product Manager at TPT and MBA Candidate at Columbia Business School.",
+      "Lead Product Manager at TPT and recent MBA graduate from Columbia Business School.",
     creator: "@dearfirstyear",
     images: ["/img/general/header-mta.png"],
   },
